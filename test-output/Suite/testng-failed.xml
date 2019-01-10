@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test thread-count="5" name="Parameters_Dataprovider(failed)">
+    <parameter name="Username" value="7893417170"/>
+    <parameter name="Password" value="suryam0078"/>
+    <classes>
+      <class name="Testing_Sms.Parameters_Dataprovider">
+        <methods>
+          <include name="f" invocation-numbers="0"/>
+        </methods>
+      </class> <!-- Testing_Sms.Parameters_Dataprovider -->
+    </classes>
+  </test> <!-- Parameters_Dataprovider(failed) -->
+</suite> <!-- Failed suite [Suite] -->

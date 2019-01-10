@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+    <line>
+      <![CDATA[Sign In Successful | ]]>
+    </line>
+    <line>
+      <![CDATA[User is Logged out and Application is closed | ]]>
+    </line>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="35704" started-at="2019-01-10T11:51:49Z" finished-at="2019-01-10T11:52:25Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="35704" started-at="2019-01-10T11:51:49Z" finished-at="2019-01-10T11:52:25Z">
+      <class name="Testing_Sms.Reporting_Looging">
+        <test-method status="PASS" signature="test()[pri:0, instance:Testing_Sms.Reporting_Looging@3891771e]" name="test" duration-ms="35620" started-at="2019-01-10T11:51:49Z" finished-at="2019-01-10T11:52:25Z">
+          <reporter-output>
+            <line>
+              <![CDATA[Sign In Successful | ]]>
+            </line>
+            <line>
+              <![CDATA[User is Logged out and Application is closed | ]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- test -->
+      </class> <!-- Testing_Sms.Reporting_Looging -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

@@ -1,0 +1,27 @@
+2019-01-10 12:20:38,195 INFO  [Log] New driver instantiated 
+2019-01-10 12:20:38,255 INFO  [Log] Implicit wait applied on the driver for 10 seconds 
+2019-01-10 12:20:45,699 INFO  [Log] Web application launched 
+2019-01-10 12:20:45,700 INFO  [Log] Click action performed on My Account link 
+2019-01-10 12:20:46,140 INFO  [Log] Username entered in the Username text box 
+2019-01-10 12:20:46,483 INFO  [Log] Password entered in the Password text box 
+2019-01-10 12:20:46,807 INFO  [Log] Click action performed on Submit button 
+2019-01-10 12:21:00,704 INFO  [Log] Click action performed on Log out link 
+2019-01-10 12:21:01,804 INFO  [Log] Browser closed 
+2019-01-10 12:28:41,716 INFO  [Reporting_Looging] New driver instantiated 
+2019-01-10 12:28:41,729 INFO  [Reporting_Looging] Implicit wait applied on the driver for 10 seconds 
+2019-01-10 12:28:49,907 INFO  [Reporting_Looging] Web application launched 
+2019-01-10 12:28:49,907 INFO  [Reporting_Looging] Click action performed on My Account link 
+2019-01-10 12:28:50,305 INFO  [Reporting_Looging] Username entered in the Username text box 
+2019-01-10 12:28:50,585 INFO  [Reporting_Looging] Password entered in the Password text box 
+2019-01-10 12:28:50,858 INFO  [Reporting_Looging] Click action performed on Submit button 
+2019-01-10 12:29:06,400 INFO  [Reporting_Looging] Click action performed on Log out link 
+2019-01-10 12:29:07,635 INFO  [Reporting_Looging] Browser closed 
+2019-01-10 17:22:03,505 INFO  [Reporting_Looging] New driver instantiated 
+2019-01-10 17:22:03,525 INFO  [Reporting_Looging] Implicit wait applied on the driver for 10 seconds 
+2019-01-10 17:22:11,230 INFO  [Reporting_Looging] Web application launched 
+2019-01-10 17:22:11,230 INFO  [Reporting_Looging] Click action performed on My Account link 
+2019-01-10 17:22:11,601 INFO  [Reporting_Looging] Username entered in the Username text box 
+2019-01-10 17:22:11,878 INFO  [Reporting_Looging] Password entered in the Password text box 
+2019-01-10 17:22:12,107 INFO  [Reporting_Looging] Click action performed on Submit button 
+2019-01-10 17:22:23,875 INFO  [Reporting_Looging] Click action performed on Log out link 
+2019-01-10 17:22:25,047 INFO  [Reporting_Looging] Browser closed 
