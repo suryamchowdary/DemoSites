@@ -1,18 +1,31 @@
-<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Suite">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-   <test name="Parameters_Dataprovider">
+<suite name="Suite" parallel="tests">
 
-	<parameter name="Username" value="7893417170"/>
+ <test name="FirefoxTest">
 
-	<parameter name="Password" value="suryam0078"/>
-	 <classes>
+ <parameter name="browser" value="firefox" />
 
-	      <class name="Testing_Sms.Parameters_Dataprovider" />
+ <classes>
 
-	</classes>
+ <class name="Testing_Sms.MultiBrowser" />
 
-   </test>
+ </classes>
+
+ </test>
+
+ <test name="ChromeTest">
+
+ <parameter name="browser" value="chrome" />
+
+ <classes>
+
+ <class name="Testing_Sms.MultiBrowser" />
+
+ </classes>
+
+ </test>
 
 </suite>
