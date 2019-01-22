@@ -15,18 +15,23 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.Test;
 
-public class TestNG_Way2sms {
+public class TestNG_Way2sms extends Excel_Data{
 	public WebDriver driver;
 	
   @Test(priority = 1)
   public void Login() {
 	   
 	  driver.manage().deleteAllCookies();
-		driver.findElement(By.id("mobileNo")).sendKeys("7893417170");
-		driver.findElement(By.id("password")).sendKeys("suryam0078");
+	    try {
+			driver.findElement(By.id("mobileNo")).sendKeys(ReadExcel(1, 0).getRawValue());
+			driver.findElement(By.id("password")).sendKeys(ReadExcel(1, 1).getStringCellValue());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		 }
 		driver.findElement(By.xpath("//*[@id=\"loginform\"]/div[2]/div[2]/button")).click();
 		
-  }
+ }
   @Test(priority = 0)
   public void InitializeDriver() {
 	  System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
@@ -45,9 +50,14 @@ public class TestNG_Way2sms {
   @Test(priority = 2)
   public void ConfigureMessage() {
 	    driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		driver.findElement(By.xpath("//*[@id='mobile']")).sendKeys("7893417170");
-		
-		driver.findElement(By.xpath("//*[@id='message']")).sendKeys("Hi Bro, How are You ?");
+		try {
+			driver.findElement(By.xpath("//*[@id='mobile']")).sendKeys(ReadExcel(1, 3).getRawValue());
+			
+			driver.findElement(By.xpath("//*[@id='message']")).sendKeys(ReadExcel(1, 2).getStringCellValue());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		
 		driver.findElement(By.id("sendButton")).click();
 		

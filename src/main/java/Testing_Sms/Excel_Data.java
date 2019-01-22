@@ -26,7 +26,7 @@ public class Excel_Data {
 	public static XSSFCell ReadExcel(int rownumber, int colnumber) throws Exception {
 		
 		FileInputStream fis = new FileInputStream(file);
-		wb = new XSSFWorkbook(file);
+		wb = new XSSFWorkbook(fis);
 		sheet1 = wb.getSheetAt(0);
 		Row = sheet1.getRow(rownumber);
 		Cell = Row.getCell(colnumber);	
@@ -37,10 +37,10 @@ public class Excel_Data {
 	
 	public static XSSFCell WriteData() throws IOException, InvalidFormatException {
 		
-		
-		wb = new XSSFWorkbook(file);
+		FileInputStream fis = new FileInputStream(file);
+		wb = new XSSFWorkbook(fis);
 		sheet1 = wb.getSheetAt(0);
-		Cell = Row.createCell(3);
+		Cell = Row.createCell(4);
 		Cell.setCellValue("Suryam");
 			FileOutputStream fileOut = new FileOutputStream(file);
 				wb.write(fileOut);
@@ -53,7 +53,7 @@ public class Excel_Data {
 	public static void main(String[]args) throws Exception
 	{
 		System.out.println(ReadExcel(1, 1));
-		System.out.println(ReadExcel(1, 0));
+		System.out.println(ReadExcel(1, 0).getRawValue());
 		System.out.println(ReadExcel(1, 2));
 		System.out.println(WriteData());
 	}

@@ -14,11 +14,11 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class Way2SmsTest {
+public class Way2SmsTest extends Excel_Data {
  public static WebDriver driver;
  
  
- @AfterMethod
+/* @AfterMethod
  public static void takeSnapShot(WebDriver webdriver,String fileWithPath) throws Exception{
 
      //Convert web driver object to TakeScreenshot
@@ -35,12 +35,18 @@ public class Way2SmsTest {
              FileUtils.copyFile(SrcFile, DestFile);
 
  }
- 
-  @BeforeTest
+ */
+  @Test
   public void Login() {
 	  driver.manage().deleteAllCookies();
-		driver.findElement(By.id("mobileNo")).sendKeys("7893417170");
-		driver.findElement(By.id("password")).sendKeys("suryam0078");
+	    try {
+			Double username = ReadExcel(1, 0).getNumericCellValue();
+			driver.findElement(By.id("mobileNo")).sendKeys(username.toString());
+			driver.findElement(By.id("password")).sendKeys(ReadExcel(1, 0).getStringCellValue());
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		driver.findElement(By.xpath("//*[@id=\"loginform\"]/div[2]/div[2]/button")).click();
   }
 
