@@ -1,55 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
+    <line>
+      <![CDATA[About to begin executing SuiteSuite-Listeners]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Listeners.beforeMethod]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Listeners.beforeMethod]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Listeners.main]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Listeners.main]]>
+    </line>
+    <line>
+      <![CDATA[About to begin executing following method : Listeners.afterMethod]]>
+    </line>
+    <line>
+      <![CDATA[Completed executing following method : Listeners.afterMethod]]>
+    </line>
   </reporter-output>
-  <suite name="Suite" duration-ms="25295" started-at="2019-01-22T12:59:02Z" finished-at="2019-01-22T12:59:27Z">
+  <suite name="Suite-Listeners" duration-ms="70" started-at="2019-01-23T07:03:08Z" finished-at="2019-01-23T07:03:09Z">
     <groups>
     </groups>
-    <test name="ChromeTest" duration-ms="18576" started-at="2019-01-22T12:59:02Z" finished-at="2019-01-22T12:59:20Z">
-      <class name="Testing_Sms.MultiBrowser">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:Testing_Sms.MultiBrowser@64485a47]" name="beforeTest" is-config="true" duration-ms="13918" started-at="2019-01-22T12:59:02Z" finished-at="2019-01-22T12:59:16Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
+    <test name="Batch-Listeners" duration-ms="70" started-at="2019-01-23T07:03:08Z" finished-at="2019-01-23T07:03:09Z">
+      <class name="Testing_Sms.Listeners">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Testing_Sms.Listeners@37374a5e]" name="beforeMethod" is-config="true" duration-ms="10" started-at="2019-01-23T07:03:09Z" finished-at="2019-01-23T07:03:09Z">
           <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Listeners.beforeMethod]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:Testing_Sms.MultiBrowser@64485a47]" name="login" duration-ms="3495" started-at="2019-01-22T12:59:16Z" finished-at="2019-01-22T12:59:19Z">
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="main()[pri:0, instance:Testing_Sms.Listeners@37374a5e]" name="main" duration-ms="10" started-at="2019-01-23T07:03:09Z" finished-at="2019-01-23T07:03:09Z">
           <reporter-output>
+            <line>
+              <![CDATA[About to begin executing following method : Listeners.main]]>
+            </line>
+            <line>
+              <![CDATA[Completed executing following method : Listeners.main]]>
+            </line>
+            <line>
+              <![CDATA[About to begin executing following method : Listeners.afterMethod]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Testing_Sms.MultiBrowser@64485a47]" name="afterTest" is-config="true" duration-ms="1125" started-at="2019-01-22T12:59:19Z" finished-at="2019-01-22T12:59:20Z">
+        </test-method> <!-- main -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Testing_Sms.Listeners@37374a5e]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-23T07:03:09Z" finished-at="2019-01-23T07:03:09Z">
           <reporter-output>
+            <line>
+              <![CDATA[Completed executing following method : Listeners.afterMethod]]>
+            </line>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- Testing_Sms.MultiBrowser -->
-    </test> <!-- ChromeTest -->
-    <test name="FirefoxTest" duration-ms="25295" started-at="2019-01-22T12:59:02Z" finished-at="2019-01-22T12:59:27Z">
-      <class name="Testing_Sms.MultiBrowser">
-        <test-method status="PASS" signature="beforeTest(java.lang.String)[pri:0, instance:Testing_Sms.MultiBrowser@192d3247]" name="beforeTest" is-config="true" duration-ms="21126" started-at="2019-01-22T12:59:02Z" finished-at="2019-01-22T12:59:23Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="login()[pri:0, instance:Testing_Sms.MultiBrowser@192d3247]" name="login" duration-ms="540" started-at="2019-01-22T12:59:23Z" finished-at="2019-01-22T12:59:23Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:Testing_Sms.MultiBrowser@192d3247]" name="afterTest" is-config="true" duration-ms="3617" started-at="2019-01-22T12:59:23Z" finished-at="2019-01-22T12:59:27Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterTest -->
-      </class> <!-- Testing_Sms.MultiBrowser -->
-    </test> <!-- FirefoxTest -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Testing_Sms.Listeners -->
+    </test> <!-- Batch-Listeners -->
+  </suite> <!-- Suite-Listeners -->
 </testng-results>

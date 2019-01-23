@@ -2,30 +2,22 @@
 
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="Suite" parallel="tests">
+<suite name="Suite-Listeners" parallel="none">
 
- <test name="FirefoxTest">
+ <listeners>
 
- <parameter name="browser" value="firefox" />
+ <listener class-name="Testing_Sms.Listeners"></listener>
 
- <classes>
+ </listeners>
 
- <class name="Testing_Sms.MultiBrowser" />
-
- </classes>
-
- </test>
-
- <test name="ChromeTest">
-
- <parameter name="browser" value="chrome" />
+ <test name="Batch-Listeners">
 
  <classes>
 
- <class name="Testing_Sms.MultiBrowser" />
+ <class name="Testing_Sms.Listeners" />
 
  </classes>
 
- </test>
+ </test> 
 
 </suite>
