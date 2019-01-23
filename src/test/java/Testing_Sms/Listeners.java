@@ -1,17 +1,14 @@
 package Testing_Sms;
 
-import org.testng.IInvokedMethod;
-import org.testng.IInvokedMethodListener;
-import org.testng.ISuite;
-import org.testng.ISuiteListener;
-import org.testng.ITestNGMethod;
+import org.testng.ITestContext;
+import org.testng.ITestListener;
 import org.testng.ITestResult;
 import org.testng.Reporter;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class Listeners implements ISuiteListener,IInvokedMethodListener {
+public class Listeners implements ITestListener {
 	@Test
 
 	  public void main() {
@@ -37,43 +34,93 @@ public class Listeners implements ISuiteListener,IInvokedMethodListener {
 	  }
 
 	@Override
-	public void onFinish(ISuite arg0) {
+	public void onFinish(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		Reporter.log("About to begin executing Suite"+arg0.getName(),true);
+		Reporter.log("Should be executed After the test"+ arg0.getName(),true);
 	}
 
 	@Override
-	public void onStart(ISuite arg0) {
+	public void onStart(ITestContext arg0) {
 		// TODO Auto-generated method stub
-		Reporter.log("About to begin executing Suite"+arg0.getName(),true);
+		Reporter.log("Should be executed before the test"+ arg0.getName(),true);
+		
 	}
 
-	
-	// This belongs to IInvokedMethodListener and will execute before every method including @Before @After @Test
+	@Override
+	public void onTestFailedButWithinSuccessPercentage(ITestResult arg0) {
+		// TODO Auto-generated method stub
+	}
+		private void printTestResults(ITestResult result) {
 
-		public void beforeInvocation(IInvokedMethod arg0, ITestResult arg1) {
+			Reporter.log("Test Method resides in " + result.getTestClass().getName(), true);
 
-			String textMsg = "About to begin executing following method : " +returnMethodName(arg0.getTestMethod());
+			if (result.getParameters().length != 0) {
 
-			Reporter.log(textMsg, true);
+				String params = null;
+
+				for (Object parameter : result.getParameters()) {
+
+					params += parameter.toString() + ",";
+
+				}
+
+				Reporter.log("Test Method had the following parameters : " + params, true);
+
+			}
+
+			String status = null;
+
+			switch (result.getStatus()) {
+
+			case ITestResult.SUCCESS:
+
+				status = "Pass";
+
+				break;
+
+			case ITestResult.FAILURE:
+
+				status = "Failed";
+
+				break;
+
+			case ITestResult.SKIP:
+
+				status = "Skipped";
+
+			}
+
+			Reporter.log("Test Status: " + status, true);
 
 		}
-	// This belongs to IInvokedMethodListener and will execute after every method including @Before @After @Test
+		
 
-		public void afterInvocation(IInvokedMethod arg0, ITestResult arg1) {
+	@Override
+	public void onTestFailure(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
-			String textMsg = "Completed executing following method : " + returnMethodName(arg0.getTestMethod());
+	@Override
+	public void onTestSkipped(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
-			Reporter.log(textMsg, true);
+	@Override
+	public void onTestStart(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
-		}
+	@Override
+	public void onTestSuccess(ITestResult arg0) {
+		// TODO Auto-generated method stub
+		
+	}
 
-		// This will return method names to the calling function
-		private String returnMethodName(ITestNGMethod method) {
 
-			return method.getRealClass().getSimpleName() + "." + method.getMethodName();
 
-		}
 
 		
 }
