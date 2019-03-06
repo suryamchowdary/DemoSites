@@ -11,10 +11,10 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 public class NewTest  {
-  @Test
+/*  @Test
   public void main() {
 	  System.out.println("1");
-  }
+  }*/
   @Test
   public void main1() {
 	  System.out.println("10");

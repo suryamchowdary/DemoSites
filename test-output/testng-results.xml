@@ -1,25 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite-Listeners" duration-ms="83" started-at="2019-01-23T08:34:22Z" finished-at="2019-01-23T08:34:22Z">
+  <suite name="Default suite" duration-ms="125" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
     <groups>
     </groups>
-    <test name="Batch-Listeners" duration-ms="83" started-at="2019-01-23T08:34:22Z" finished-at="2019-01-23T08:34:22Z">
-      <class name="Testing_Sms.Listeners">
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Testing_Sms.Listeners@8646db9]" name="beforeMethod" is-config="true" duration-ms="13" started-at="2019-01-23T08:34:22Z" finished-at="2019-01-23T08:34:22Z">
+    <test name="Default test" duration-ms="125" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
+      <class name="Testing_Sms.NewTest">
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Testing_Sms.NewTest@69b0fd6f]" name="beforeMethod" is-config="true" duration-ms="31" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="main()[pri:0, instance:Testing_Sms.Listeners@8646db9]" name="main" duration-ms="13" started-at="2019-01-23T08:34:22Z" finished-at="2019-01-23T08:34:22Z">
+        <test-method status="PASS" signature="main1()[pri:0, instance:Testing_Sms.NewTest@69b0fd6f]" name="main1" duration-ms="16" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- main -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Testing_Sms.Listeners@8646db9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-23T08:34:22Z" finished-at="2019-01-23T08:34:22Z">
+        </test-method> <!-- main1 -->
+        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:Testing_Sms.NewTest@69b0fd6f]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Testing_Sms.NewTest@69b0fd6f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-      </class> <!-- Testing_Sms.Listeners -->
-    </test> <!-- Batch-Listeners -->
-  </suite> <!-- Suite-Listeners -->
+        <test-method status="PASS" signature="main2()[pri:0, instance:Testing_Sms.NewTest@69b0fd6f]" name="main2" duration-ms="0" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- main2 -->
+        <test-method status="PASS" signature="afterMethod()[pri:0, instance:Testing_Sms.NewTest@69b0fd6f]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-02-12T12:10:20Z" finished-at="2019-02-12T12:10:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- Testing_Sms.NewTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>

@@ -1,5 +1,7 @@
 package TestCase;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
@@ -7,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.PageFactory;
 
 import POM.Page_Factory;
+import Testing_Sms.Excel_Data;
 
 public class TestCase_01 {
 
@@ -14,7 +17,7 @@ public class TestCase_01 {
 	
 
 	
-	public static void main(String[]args)
+	public static void main(String[]args) throws Exception
 	{
 		  System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
 			ChromeDriverService service = ChromeDriverService.createDefaultService();
@@ -28,9 +31,11 @@ public class TestCase_01 {
         
         PageFactory.initElements(driver, TestCase_01.class);
         PageFactory.initElements(driver, Page_Factory.class);
-        Page_Factory.username.sendKeys("7893417170");
-        Page_Factory.password.sendKeys("suryam0078");
+        Page_Factory.username.sendKeys(Excel_Data.ReadExcel(1, 0).getRawValue());
+        Page_Factory.password.sendKeys(Excel_Data.ReadExcel(1, 1).getStringCellValue());
         Page_Factory.login.click();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         Page_Factory.logout.click();
+        driver.quit();
 	}
 }
